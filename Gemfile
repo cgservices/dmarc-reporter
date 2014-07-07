@@ -35,7 +35,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'mysql2'
 end
 
 group :production do

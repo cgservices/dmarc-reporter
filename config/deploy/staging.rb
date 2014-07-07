@@ -20,12 +20,13 @@ default_run_options[:pty] = true
 set :default_shell, "bash -l"
 
 # Extra environment options
+set :default_environment, {'LANG' => 'en_US.UTF-8'}
 set :normalize_asset_timestamps, false
 
 # Database config
 set :database_config, {
     :adapter => "mysql2",
-    :username => "root",
+    :username => "dmarc",
     :host => "10.0.0.216",
     :development => "dev_dmarc",
     :test => "test_dmarc",
@@ -38,6 +39,5 @@ set :runner, "deployer"
 set :group, "deployer"
 set :use_sudo, false
 
-#Overrule passenger settings
-require 'rdeploy/recipes/default_with_database'
-
+# Custom
+set :ruby_static_path, "/data/ruby_static/#{application}"
