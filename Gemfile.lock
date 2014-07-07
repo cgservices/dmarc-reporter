@@ -126,7 +126,6 @@ GEM
       daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
-    pg (0.14.0)
     polyglot (0.3.3)
     progressbar (0.11.0)
     rack (1.4.1)
@@ -235,7 +234,6 @@ DEPENDENCIES
   mysql2
   nokogiri
   passenger
-  pg
   rails (= 3.2.7)
   rails_best_practices
   rdeploy (>= 0.3.0)!
