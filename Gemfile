@@ -12,6 +12,7 @@ gem 'rubyzip'
 gem 'thin'
 gem 'airbrake'
 gem 'mysql2'
+gem 'whenever'
 
 # Gems used only for assets and not required
 # in production environments by default.

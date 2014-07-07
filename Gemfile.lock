@@ -243,3 +243,4 @@ DEPENDENCIES
   shoulda-matchers
   thin
   uglifier
+  whenever
