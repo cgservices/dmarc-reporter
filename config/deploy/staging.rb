@@ -41,3 +41,17 @@ set :use_sudo, false
 
 # Custom
 set :ruby_static_path, "/data/ruby_static/#{application}"
+
+# Project specific deploy actions
+namespace(:custom) do
+
+  # Assets commands
+  namespace :assets do
+    # Copy the precompiled assets from the share to the local application server.
+    desc "Copy precompiled assets from share to application map"
+    task :copy, :roles => :app do
+      run "cp -rf #{ruby_static_path}/assets #{release_path}/public/"
+    end
+  end
+
+end
